@@ -16,6 +16,6 @@ class Solution {
             $count++;
         }
         $index = $index + 1;
-        $this->twoSum($nums, $target, $index);
+        return $this->twoSum($nums, $target, $index);
     }
 }
