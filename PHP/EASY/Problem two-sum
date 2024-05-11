@@ -1,0 +1,21 @@
+class Solution {
+    /**
+     * @param Integer[] $nums
+     * @param Integer $target
+     * @param Integer $index
+     * @return Integer[]
+     */
+    function twoSum($nums, $target, $index = 0) {
+        $value = $target - $nums[0];
+        $nums = array_slice($nums,1);
+        $count = 0;
+        foreach($nums as $num2){
+            if ($value == $num2){
+                return [$index, $index + $count +1];
+            }
+            $count++;
+        }
+        $index = $index + 1;
+        $this->twoSum($nums, $target, $index);
+    }
+}
