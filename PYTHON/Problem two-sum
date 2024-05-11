@@ -6,4 +6,4 @@ class Solution:
             if value == n:
                 return [index, index + i + 1]
         index += 1
-        self.twoSum(nums, target, index)
+        return self.twoSum(nums, target, index)
